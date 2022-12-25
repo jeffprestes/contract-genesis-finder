@@ -9,7 +9,7 @@ func main() {
 	log.Println("Obtendo definição de servidor RPC...")
 	tmp, err := os.ReadFile("rpcserver.txt")
 	if err != nil {
-		log.Fatalf("[main] Could not read rpcserver due to this %s error \n", err)
+		log.Fatalf("[main] Não pôde ler a definição da URL do servidor RPC devido a este erro %s\n", err)
 	}
 	rpcServer := cleanContentBytes(tmp)
 	log.Println("Iniciando as buscas através de:", rpcServer)
